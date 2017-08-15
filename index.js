@@ -1,9 +1,28 @@
-// Write your code in this file!
+var customerName = 'bob'
+const leastFavoriteCustomer = 'sour fred'
 
-const currentUser = 'Grace Hopper';
+function upperCaseCustomerName() {
+  return customerName = customerName.toUpperCase()
+}
 
-const welcomeMessage = `Welcome to Flatbook, ${currentUser}!`;
+function changeLeastFavoriteCustomer(){
+  leastFavoriteCustomer = 'sour fred'
+}
 
-const excitedWelcomeMessage = welcomeMessage.toUpperCase();
 
-const shortGreeting = `Welcome, ${currentUser.slice(0, 1)}!`;
+function setBestCustomer(){
+  bestCustomer = 'not bob'
+}
+
+function overWriteBestCustomer(newFavorite){
+  bestCustomer = newFavorite
+}
+
+function congratulateCustomer(){
+  return `congrats ${favoriteCustomer}`
+}
+
+function attemptTwoFavoriteCustomers(){
+    let favoriteCustomer = 'bar'
+    let favoriteCustomer = 'not bar'
+}

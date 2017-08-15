@@ -1,58 +1,42 @@
 const expect = chai.expect;
+describe('Fix the Scope', function() {
+  describe('declare customerName to be bob in global scope', function() {
+    it('returns the customerName', () => {
+      expect(window.customerName).to.equal('bob')
+    })
+  })
 
-describe('index.js', () => {
-  describe('currentUser', () => {
-    it('is defined', () => {
-      expect(currentUser, "The 'currentUser' variable must contain a string").to.be.a('string');
-      expect(currentUser, "You need to modify the value of the 'currentUser' variable").to.not.be.empty;
-    });
-  });
+  describe('upperCaseCustomerName()', function() {
+    it('returns the customerName', () => {
+      expect(window.customerName).to.equal('bob')
+      upperCaseCustomerName()
+      expect(window.customerName).to.equal('BOB')
+    })
+  })
+  describe('setBestCustomer()', function() {
+    it('setBestCustomer', () => {
+      expect(window.bestCustomer).to.equal(undefined)
+      window.setBestCustomer()
+      expect(window.bestCustomer).to.equal('not bob')
+    })
+  })
 
-  describe('welcomeMessage', () => {
-    it('contains "Welcome to Flatbook, "', () => {
-      expect(welcomeMessage).to.have.string('Welcome to Flatbook, ');
-    });
+  describe('overWriteBestCustomer()', function() {
+    it('overwrites the best customer', () => {
+      overWriteBestCustomer('maybe bob')
+      expect(window.bestCustomer).to.equal('maybe bob')
+    })
+  })
 
-    it("contains the value of the 'currentUser' variable", () => {
-      expect(welcomeMessage).to.have.string(currentUser);
-    });
+  describe('reassignLeastFavorite', function(){
+    it('unsuccessfully tries to reassign the least favorite customer', () => {
+      expect(changeLeastFavoriteCustomer).to.throw(TypeError)
+    })
+  })
 
-    it('ends with an exclamation point!', () => {
-      expect(welcomeMessage.substr(-1)).to.eq('!');
-    });
-  });
-
-  describe('excitedWelcomeMessage', () => {
-    it('contains "WELCOME TO FLATBOOK, "', () => {
-      expect(excitedWelcomeMessage).to.have.string('WELCOME TO FLATBOOK, ');
-    });
-
-    it("contains the value of the 'currentUser' variable", () => {
-      const upperCaseCurrentUser = currentUser.toUpperCase();
-
-      expect(excitedWelcomeMessage).to.have.string(upperCaseCurrentUser);
-    });
-
-    it('ends with an exclamation point', () => {
-      expect(excitedWelcomeMessage.substr(-1)).to.eq('!');
-    });
-  });
-
-  describe('shortGreeting', () => {
-    it(`contains "Welcome, "`, () => {
-      expect(shortGreeting).to.have.string('Welcome, ');
-    });
-
-    it("contains the first initial of the name stored in the 'currentUser' variable", () => {
-      const firstInitial = currentUser[0];
-      const restOfName = currentUser.slice(1);
-
-      expect(shortGreeting).to.have.string(firstInitial);
-      expect(shortGreeting).to.not.have.string(restOfName);
-    });
-
-    it('ends with an exclamation point', () => {
-      expect(shortGreeting.substr(-1)).to.eq('!');
-    });
-  });
-});
+  describe('attemptTwoFavoriteCustomers', function(){
+    it('unsuccessfully tries to declare favoriteCustomer with let two times', () => {
+      expect(attemptTwoFavoriteCustomers).to.throw(SyntaxError)
+    })
+  })
+})
