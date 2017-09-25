@@ -1,9 +1,10 @@
 tags:
-  - learn.co
-  - flatiron school
-  - javascript
   - scope
-  - code-along
+  - let
+  - const
+  - var
+  - global
+  - lab
 languages:
   - javascript
 resources:
