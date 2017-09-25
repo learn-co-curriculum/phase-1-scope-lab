@@ -1,13 +1,13 @@
 {
   "name": "js-principles-scope-lab",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "JavaScript Principles Scope Lab for Learn.co",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/learn-co-curriculum/js-principles-scope-lab.git"
   },
-   "scripts": {
+  "scripts": {
     "postinstall": "gem install learn-co",
     "test": "node_modules/browser-sync/bin/browser-sync.js start --config node_modules/learn-browser/bs-config.js"
   },
@@ -18,7 +18,7 @@
     "scope",
     "lab"
   ],
-  "author": "@gj",
+  "author": "Flatiron School",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/learn-co-curriculum/js-principles-scope-lab/issues"
