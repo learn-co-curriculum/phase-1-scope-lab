@@ -8,7 +8,7 @@ describe('Fix the Scope', function() {
   });
 
   describe('upperCaseCustomerName()', function() {
-    it('returns the customerName', function() {
+    it('modifies the customerName variable', function() {
       expect(window.customerName).to.equal('bob');
 
       upperCaseCustomerName();
