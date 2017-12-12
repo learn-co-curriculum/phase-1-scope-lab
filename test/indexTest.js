@@ -39,10 +39,4 @@ describe('Fix the Scope', function() {
       expect(changeLeastFavoriteCustomer).to.throw(TypeError);
     });
   });
-
-  describe('attemptTwoFavoriteCustomers()', function() {
-    it('unsuccessfully tries to declare favoriteCustomer with let two times', function() {
-      expect(attemptTwoFavoriteCustomers).to.throw(SyntaxError);
-    });
-  });
 });
