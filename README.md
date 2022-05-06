@@ -21,7 +21,7 @@ and know what to avoid in the future.
 Ok, these are your tasks:
 
 - `customerName`: Declare a variable in global scope called `customerName` using
-  the `var` keyword.
+  the `var` keyword and assign it the value `'bob'`.
 - `upperCaseCustomerName()`: Write a function that accesses that global
   `customerName` variable, and uppercases it.
 - `setBestCustomer()`: Write a function that when called, declares a variable
@@ -31,7 +31,7 @@ Ok, these are your tasks:
    explore right now.
 - `overwriteBestCustomer()`: See the consequences of declaring a variable in
    global scope, by writing a new function called `overwriteBestCustomer()` that
-   changes that `bestCustomer` variable.
+   changes that `bestCustomer` variable to `'maybe bob'`.
 - `leastFavoriteCustomer` and `changeLeastFavoriteCustomer()`: Now declare a
   constant (using the `const` keyword) in global scope called
   `leastFavoriteCustomer`; be sure to assign it some initial value. Finally,
