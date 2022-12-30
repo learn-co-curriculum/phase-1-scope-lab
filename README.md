@@ -18,6 +18,10 @@ when specifically instructed otherwise. We do this because, by testing the
 limits and exposing the underbelly of a language, you can better understand it
 and know what to avoid in the future.
 
+**Fork and clone** this lab into your local environment. Navigate into its
+directory in the terminal, then run `code .` to open the files in Visual Studio
+Code.
+
 Ok, these are your tasks:
 
 - `customerName`: Declare a variable in global scope called `customerName` using
@@ -38,3 +42,6 @@ Ok, these are your tasks:
   write a function called `changeLeastFavoriteCustomer()` that attempts to
   change that constant - notice what JavaScript does when you try to change the
   constant.
+
+When you're done, remember to commit and push your changes up to GitHub, then
+submit your work to Canvas using CodeGrade.
